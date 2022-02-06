@@ -8,6 +8,22 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Resource",
+"class": "Card",
+"language": "GDScript",
+"path": "res://resource/card/card.gd"
+}, {
+"base": "Button",
+"class": "CardArea",
+"language": "GDScript",
+"path": "res://prefab/card_node/card_area.gd"
+} ]
+_global_script_class_icons={
+"Card": "",
+"CardArea": ""
+}
+
 [application]
 
 config/name="Card Game"

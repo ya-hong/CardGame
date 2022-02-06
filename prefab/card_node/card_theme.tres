@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=7 format=2]
+
+[ext_resource path="res://prefab/card_node/card_font.tres" type="DynamicFont" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[resource]
+Button/styles/disabled = SubResource( 1 )
+Button/styles/focus = SubResource( 2 )
+Button/styles/hover = SubResource( 3 )
+Button/styles/normal = SubResource( 4 )
+Button/styles/pressed = SubResource( 5 )
+Label/colors/font_color = Color( 0.92549, 0.92549, 0.92549, 1 )
+Label/colors/font_color_shadow = Color( 0.733333, 0, 0, 1 )
+Label/colors/font_outline_modulate = Color( 0, 0, 0, 0.792157 )
+Label/fonts/font = ExtResource( 1 )
