@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://prefab/card_node/name_board/name_board_iron.tscn" type="PackedScene" id=1]
+[ext_resource path="res://prefab/card_node/card_front/hand_front_proto.tscn" type="PackedScene" id=2]
+
+[node name="EquipmentFront" instance=ExtResource( 2 )]
+
+[node name="Frame" parent="." index="1"]
+region_rect = Rect2( 140, 136, 86, 72 )
+
+[node name="CardImage" parent="Frame" index="0"]
+scale = Vector2( 0.111111, 0.111111 )
+
+[node name="HeadBoard" parent="." index="2"]
+region_rect = Rect2( 135, 273, 96, 18 )
+
+[node name="NameBoardIron" parent="NameBoardNode" index="0" instance=ExtResource( 1 )]

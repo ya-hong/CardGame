@@ -24,6 +24,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://prefab/card_node/card_node/card_area.gd"
 }, {
+"base": "ReferenceRect",
+"class": "CardContinaer",
+"language": "GDScript",
+"path": "res://prefab/card_container/card_container.gd"
+}, {
 "base": "Sprite",
 "class": "CardImage",
 "language": "GDScript",
@@ -38,6 +43,11 @@ _global_script_classes=[ {
 "class": "CardNodeFront",
 "language": "GDScript",
 "path": "res://prefab/card_node/card_node/card_node_front.gd"
+}, {
+"base": "Resource",
+"class": "Deck",
+"language": "GDScript",
+"path": "res://resource/deck.gd"
 }, {
 "base": "Hand",
 "class": "Equipment",
@@ -73,9 +83,11 @@ _global_script_class_icons={
 "Card": "",
 "CardAnimation": "",
 "CardArea": "",
+"CardContinaer": "",
 "CardImage": "",
 "CardNodeBack": "",
 "CardNodeFront": "",
+"Deck": "",
 "Equipment": "",
 "Event": "",
 "EventHandler": "",
@@ -88,6 +100,10 @@ _global_script_class_icons={
 
 config/name="Card Game"
 config/icon="res://icon.png"
+
+[autoload]
+
+Clock="*res://global/clock.gd"
 
 [debug]
 

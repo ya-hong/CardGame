@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://asset/pixelcardassest_v02.png" type="Texture" id=1]
-[ext_resource path="res://prefab/card_node/name_board/name_board.tscn" type="PackedScene" id=2]
 [ext_resource path="res://prefab/card_node/card_node/card_image.gd" type="Script" id=3]
 [ext_resource path="res://prefab/card_node/resource/get_card.gd" type="Script" id=4]
 [ext_resource path="res://prefab/card_node/card_front/icons/icons.tscn" type="PackedScene" id=5]
@@ -19,7 +18,7 @@ position = Vector2( 0, -5.5 )
 z_index = 1
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 140, 136, 86, 72 )
+region_rect = Rect2( 22, 136, 86, 72 )
 
 [node name="CardImage" type="Sprite" parent="Frame"]
 position = Vector2( 0, 0.5 )
@@ -43,5 +42,5 @@ margin_top = -9.0
 margin_right = 45.0
 margin_bottom = 9.0
 
-[node name="NameBoard" parent="." instance=ExtResource( 2 )]
+[node name="NameBoardNode" type="Node2D" parent="."]
 position = Vector2( 0, 46 )

@@ -17,6 +17,9 @@ func _enter_tree():
 	adjust(size, gscale)
 
 func _process(delta):
+	if get_owner().get('card'):
+		text = get_owner().card.card_name
+	
 	visible = get_owner().is_visible_in_tree()
 
 	var gscale = get_owner().global_scale

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://prefab/card_node/name_board/name_board.tscn" type="PackedScene" id=1]
+[ext_resource path="res://prefab/card_node/card_front/hand_front_proto.tscn" type="PackedScene" id=2]
+
+[node name="HandFront" instance=ExtResource( 2 )]
+
+[node name="CardImage" parent="Frame" index="0"]
+scale = Vector2( 0.111111, 0.111111 )
+
+[node name="NameBoard" parent="NameBoardNode" index="0" instance=ExtResource( 1 )]

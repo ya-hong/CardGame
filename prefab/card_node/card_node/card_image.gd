@@ -7,7 +7,7 @@ export(Vector2) var size
 
 
 func _enter_tree():
-	if get_owner().card && get_owner().card.get('texture'):
+	if get_owner().get('card') && get_owner().card.get('texture'):
 		texture = get_owner().card.texture 
 
 

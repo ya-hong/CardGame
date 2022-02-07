@@ -24,4 +24,41 @@ func _ready():
 func play_animation(animation, argv: Array = []):
 	if block:
 		return 
+	if not has_method(animation):
+		return 
+		
 	callv(animation, argv)
+
+
+func scale_up():
+	interpolate_property(
+		node, "scale",
+		null, Vector2(1.2, 1.2), 0.2,
+		Tween.TRANS_QUINT, Tween.EASE_OUT
+	)
+	start()
+
+
+func scale_down():
+	interpolate_property(
+		node, "scale",
+		null, Vector2(1, 1), 0.2,
+		Tween.TRANS_QUINT, Tween.EASE_IN
+	)
+	start()
+
+
+func trigger():
+	interpolate_property(
+		node, "scale",
+		null, Vector2(1.5, 1.5), 0.3,
+		Tween.TRANS_QUINT, Tween.EASE_OUT
+	)
+	start()
+	yield(Clock.count(0.3), 'completed')
+	interpolate_property(
+		node, "scale",
+		null, Vector2(1, 1), 0.3,
+		Tween.TRANS_QUINT, Tween.EASE_IN
+	)
+	start()

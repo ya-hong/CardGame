@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://asset/pixelcardassest_v02.png" type="Texture" id=1]
+[ext_resource path="res://prefab/card_node/card_front/icons/st_icon.gd" type="Script" id=2]
 
 [node name="StIcon" type="ReferenceRect"]
 margin_right = 18.0
 margin_bottom = 18.0
 rect_min_size = Vector2( 18, 18 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

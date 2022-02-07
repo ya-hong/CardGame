@@ -2,10 +2,8 @@ extends Card
 class_name Hand 
 
 
-
-# 卡牌消耗
-export(int) var mp 
-export(int) var st 
+# 升级后的卡牌
+export(Resource) var upgrade 
 
 # 卡牌效果
 export(Script) var Skill
