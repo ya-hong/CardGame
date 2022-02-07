@@ -4,7 +4,7 @@ class_name CardArea
 
 
 func _init():
-	theme = preload("res://prefab/card_node/card_theme.tres")
+	theme = preload("res://prefab/card_node/resource/card_theme.tres")
 
 
 func _enter_tree():

@@ -29,6 +29,7 @@ export(PackedScene) var Prefab
 func get_prefab():
     if Prefab == null:
         push_error("此卡牌无可使用的子场景")
+        return null 
     
     var prefab = Prefab.instance()
     prefab.setup(self) 

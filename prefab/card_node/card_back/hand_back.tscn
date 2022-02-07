@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://prefab/card_node/card_back/card_back.tscn" type="PackedScene" id=1]
+[ext_resource path="res://prefab/card_node/resource/get_card.gd" type="Script" id=2]
+
+[node name="HandBack" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Body" parent="." index="0"]
+region_rect = Rect2( 14, 4, 100, 128 )

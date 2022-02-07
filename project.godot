@@ -14,14 +14,38 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://resource/card/card.gd"
 }, {
+"base": "Tween",
+"class": "CardAnimation",
+"language": "GDScript",
+"path": "res://prefab/card_node/card_node/card_animation.gd"
+}, {
 "base": "Button",
 "class": "CardArea",
 "language": "GDScript",
-"path": "res://prefab/card_node/card_area.gd"
+"path": "res://prefab/card_node/card_node/card_area.gd"
+}, {
+"base": "Sprite",
+"class": "CardImage",
+"language": "GDScript",
+"path": "res://prefab/card_node/card_node/card_image.gd"
+}, {
+"base": "Node2D",
+"class": "CardNodeBack",
+"language": "GDScript",
+"path": "res://prefab/card_node/card_node/card_node_back.gd"
+}, {
+"base": "Node2D",
+"class": "CardNodeFront",
+"language": "GDScript",
+"path": "res://prefab/card_node/card_node/card_node_front.gd"
 } ]
 _global_script_class_icons={
 "Card": "",
-"CardArea": ""
+"CardAnimation": "",
+"CardArea": "",
+"CardImage": "",
+"CardNodeBack": "",
+"CardNodeFront": ""
 }
 
 [application]

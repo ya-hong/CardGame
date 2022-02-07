@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://asset/pixelcardassest_v02.png" type="Texture" id=1]
+[ext_resource path="res://asset/cardbacks4092021.png" type="Texture" id=2]
+[ext_resource path="res://prefab/card_node/resource/get_card.gd" type="Script" id=3]
+
+[node name="CardBack" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Body" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 250, 4, 100, 128 )
+
+[node name="Pattern" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 344, 140, 85, 109 )

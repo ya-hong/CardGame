@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://prefab/card_node/card_front/icons/icons.gd" type="Script" id=1]
+[ext_resource path="res://prefab/card_node/card_front/icons/st_icon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://prefab/card_node/card_front/icons/equipment_icon.tscn" type="PackedScene" id=3]
+
+[node name="Icons" type="HBoxContainer"]
+margin_right = 90.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 0, 18 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EquipmentIcon" parent="." instance=ExtResource( 3 )]
+
+[node name="StIcon" parent="." instance=ExtResource( 2 )]
+margin_left = 72.0
+margin_right = 90.0
+size_flags_horizontal = 10

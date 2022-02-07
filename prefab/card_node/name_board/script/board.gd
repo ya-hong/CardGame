@@ -7,7 +7,7 @@ func _process(delta):
 	if not texture:
 		return 
 	
-	var size = get_owner().size
+	var size = get_owner().SIZE
 	
 	var t_size = texture.get_size()
 	if region_enabled:
