@@ -1,4 +1,5 @@
 extends Node2D
+class_name CardNode 
 
 
 const SIZE = Vector2(100, 128)

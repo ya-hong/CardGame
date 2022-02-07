@@ -30,6 +30,7 @@ func play_animation(animation, argv: Array = []):
 	callv(animation, argv)
 
 
+	
 func scale_up():
 	interpolate_property(
 		node, "scale",
@@ -46,6 +47,15 @@ func scale_down():
 		Tween.TRANS_QUINT, Tween.EASE_IN
 	)
 	start()
+
+
+func move_to(position: Vector2):
+	interpolate_property(
+		get_owner(), "position",
+		null, position, 0.2, 
+		Tween.TRANS_CUBIC, Tween.EASE_OUT	
+	)
+	start() 
 
 
 func trigger():
