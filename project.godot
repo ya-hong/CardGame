@@ -38,6 +38,36 @@ _global_script_classes=[ {
 "class": "CardNodeFront",
 "language": "GDScript",
 "path": "res://prefab/card_node/card_node/card_node_front.gd"
+}, {
+"base": "Hand",
+"class": "Equipment",
+"language": "GDScript",
+"path": "res://resource/card/hand/equipment.gd"
+}, {
+"base": "Card",
+"class": "Event",
+"language": "GDScript",
+"path": "res://resource/card/event.gd"
+}, {
+"base": "Reference",
+"class": "EventHandler",
+"language": "GDScript",
+"path": "res://resource/card/event/event_handler.gd"
+}, {
+"base": "Card",
+"class": "Hand",
+"language": "GDScript",
+"path": "res://resource/card/hand.gd"
+}, {
+"base": "Reference",
+"class": "HandSkill",
+"language": "GDScript",
+"path": "res://resource/card/hand/hand_skill.gd"
+}, {
+"base": "Resource",
+"class": "Journey",
+"language": "GDScript",
+"path": "res://resource/journey.gd"
 } ]
 _global_script_class_icons={
 "Card": "",
@@ -45,7 +75,13 @@ _global_script_class_icons={
 "CardArea": "",
 "CardImage": "",
 "CardNodeBack": "",
-"CardNodeFront": ""
+"CardNodeFront": "",
+"Equipment": "",
+"Event": "",
+"EventHandler": "",
+"Hand": "",
+"HandSkill": "",
+"Journey": ""
 }
 
 [application]

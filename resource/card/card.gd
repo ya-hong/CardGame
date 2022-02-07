@@ -15,7 +15,7 @@ export(String) var card_name = "no name"
 export(String) var info = "" setget , _get_info 
 
 func _get_info(): # 继承此函数来定制卡牌描述
-    return info 
+	return info 
 
 
 # 用于显示卡牌的子场景
@@ -27,10 +27,10 @@ export(PackedScene) var Prefab
 
 
 func get_prefab():
-    if Prefab == null:
-        push_error("此卡牌无可使用的子场景")
-        return null 
-    
-    var prefab = Prefab.instance()
-    prefab.setup(self) 
-    return prefab 
+	if Prefab == null:
+		push_error("此卡牌无可使用的子场景")
+		return null 
+	
+	var prefab = Prefab.instance()
+	prefab.setup(self) 
+	return prefab 
