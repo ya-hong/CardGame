@@ -15,3 +15,6 @@ func _enter_tree():
 	connect("mouse_entered", get_owner(), "emit_signal", ['mouse_entered'])
 	connect("mouse_exited", get_owner(), "emit_signal", ['mouse_exited'])
 
+
+# func _pressed():
+# 	print("pressed")

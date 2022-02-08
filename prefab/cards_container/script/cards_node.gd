@@ -1,11 +1,15 @@
+tool
 extends Node2D
 class_name CardsNode
 
 
 var rng = RandomNumberGenerator.new()
 
+
 func _enter_tree():
-	position = get_owner().rect_size / 2
+	get_owner().prefab_size_type = Constants.SizeType.NORMAL
+	get_owner().rect_min_size = Constants.CARD_SIZE
+
 
 
 func _ready():
@@ -18,6 +22,9 @@ func _ready():
 	get_owner().connect("replaced", self, "on_replaced")
 	get_owner().connect("focused", self, "on_focused")
 	get_owner().connect("unfocused", self, "on_unfocused")
+
+	yield(get_tree(), 'idle_frame')
+	on_owner_resized()
 
 
 

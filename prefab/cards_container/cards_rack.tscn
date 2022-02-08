@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://prefab/cards_container/script/cards_rack.gd" type="Script" id=1]
+[ext_resource path="res://prefab/cards_container/cards_container_proto.tscn" type="PackedScene" id=2]
+[ext_resource path="res://prefab/cards_container/script/cards_container.gd" type="Script" id=3]
+
+[node name="CardsRack" instance=ExtResource( 2 )]
+rect_min_size = Vector2( 96, 128 )
+script = ExtResource( 3 )
+prefab_size_type = 1
+
+[node name="CardsNode" parent="." index="0"]
+position = Vector2( 48, 64 )
+script = ExtResource( 1 )

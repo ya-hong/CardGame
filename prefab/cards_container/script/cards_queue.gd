@@ -1,21 +1,30 @@
+tool
 extends CardsNode
 
 var width
 export(int) var max_separation = 175
 
+
+
 func _enter_tree():
+	get_owner().rect_min_size = Vector2(
+		Constants.CARD_SIZE.x * 2 + 5,
+		Constants.CARD_SIZE.y 
+	)
 	width = get_owner().rect_size.x 
 
 
-func _ready():
-	get_owner().connect("resized", self, "on_owner_resized")
 
 
 func adjust():
 	var n = get_child_count()
+	if n == 0:
+		return 
+	
+	var SIZE = get_child(0).SIZE
 	var separation = max_separation
-	if (n - 1) * separation + CardNode.SIZE.x > width:
-		separation = (width - CardNode.SIZE.x) / n
+	if (n - 1) * separation + SIZE.x > width:
+		separation = (width - SIZE.x) / n
 	var pos = position.x - (n - 1) * separation / 2
 	for i in range(n):
 		var child: CardNode = get_child(i)

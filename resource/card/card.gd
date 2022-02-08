@@ -19,7 +19,8 @@ func _get_info(): # 继承此函数来定制卡牌描述
 
 
 # 用于显示卡牌的子场景
-export(PackedScene) var Prefab 
+export(PackedScene) var SmallPrefab = load("res://prefab/card_node/small_card_node.tscn")
+export(PackedScene) var Prefab = load("res://prefab/card_node/normal_card_node.tscn")
 
 
 
