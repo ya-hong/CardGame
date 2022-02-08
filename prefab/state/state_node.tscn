@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://prefab/state/state_node.gd" type="Script" id=1]
+
+[node name="StateNode" type="ReferenceRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1205.0
+margin_bottom = -700.0
+rect_min_size = Vector2( 75, 20 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.380392, 0.380392, 0.380392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Front" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -45.0
+color = Color( 0.941406, 0.202255, 0.202255, 0.607843 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Number" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "666/666"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

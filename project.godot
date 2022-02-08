@@ -57,7 +57,7 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "Constants",
 "language": "GDScript",
-"path": "res://global/db.gd"
+"path": "res://global/constants.gd"
 }, {
 "base": "Resource",
 "class": "Deck",
@@ -93,6 +93,16 @@ _global_script_classes=[ {
 "class": "Journey",
 "language": "GDScript",
 "path": "res://resource/journey.gd"
+}, {
+"base": "Resource",
+"class": "State",
+"language": "GDScript",
+"path": "res://resource/state.gd"
+}, {
+"base": "ReferenceRect",
+"class": "StateNode",
+"language": "GDScript",
+"path": "res://prefab/state/state_node.gd"
 } ]
 _global_script_class_icons={
 "Card": "",
@@ -111,7 +121,9 @@ _global_script_class_icons={
 "EventHandler": "",
 "Hand": "",
 "HandSkill": "",
-"Journey": ""
+"Journey": "",
+"State": "",
+"StateNode": ""
 }
 
 [application]
