@@ -12,6 +12,7 @@ func _enter_tree():
 	rect_position = - rect_size / 2
 	
 	connect("pressed", get_owner(), "emit_signal", ["clicked"])
+	connect("pressed", get_owner().card, "emit_signal", ["selected"]) 
 	connect("mouse_entered", get_owner(), "emit_signal", ['mouse_entered'])
 	connect("mouse_exited", get_owner(), "emit_signal", ['mouse_exited'])
 
