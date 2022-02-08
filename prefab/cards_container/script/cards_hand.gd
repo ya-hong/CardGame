@@ -32,7 +32,7 @@ func on_focused(prefab):
 	if separation >= SIZE.x:
 		return 
 
-	var x = SIZE.x / 2
+	var x = -width / 2 + SIZE.x / 2
 	move_prefab_x_to(get_child(0), x)
 	for i in range(1, idx + 1):
 		x += separation

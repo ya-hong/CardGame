@@ -15,6 +15,10 @@ func _enter_tree():
 	var gscale = get_owner().global_scale
 	var size = gscale * get_owner().SIZE
 	adjust(size, gscale)
+	
+	if get("custom_fonts/font"):
+		get("custom_fonts/font").resource_local_to_scene = true
+
 
 func _process(delta):
 	if get_owner().get('card'):

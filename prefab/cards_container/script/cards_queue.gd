@@ -24,8 +24,8 @@ func adjust():
 	var SIZE = get_child(0).SIZE
 	var separation = max_separation
 	if (n - 1) * separation + SIZE.x > width:
-		separation = (width - SIZE.x) / n
-	var pos = position.x - (n - 1) * separation / 2
+		separation = (width - SIZE.x) / (n - 1)
+	var pos = - (n - 1) * separation / 2
 	for i in range(n):
 		var child: CardNode = get_child(i)
 		child.emit_signal(
