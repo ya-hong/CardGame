@@ -10,7 +10,7 @@ var character_node: CardNode
 
 func _enter_tree():
 	var card = preload("res://data/event/init.tres")
-	var character = Card.new()
+	var character = Character.new()
 	character.card_name = "Alice"
 	
 	journey.pile.append(card)

@@ -23,6 +23,10 @@ export(SceneMod) var scene_mod = SceneMod.NO
 var scene
 
 
+func _init():
+	Prefab = load("res://prefab/card_node/event_node.tscn")
+
+
 func handler(journey: Journey):
 	if (
 			Scene && scene_mod != SceneMod.NO

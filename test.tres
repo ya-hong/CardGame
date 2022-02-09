@@ -1,29 +1,39 @@
-[gd_resource type="Resource" load_steps=9 format=2]
+[gd_resource type="Resource" load_steps=11 format=2]
 
-[ext_resource path="res://resource/card/card.gd" type="Script" id=1]
-[ext_resource path="res://resource/deck.gd" type="Script" id=2]
-[ext_resource path="res://prefab/card_node/normal_card_node.tscn" type="PackedScene" id=3]
-[ext_resource path="res://resource/journey.gd" type="Script" id=4]
-[ext_resource path="res://prefab/card_node/small_card_node.tscn" type="PackedScene" id=5]
+[ext_resource path="res://resource/deck.gd" type="Script" id=1]
+[ext_resource path="res://resource/journey.gd" type="Script" id=2]
+[ext_resource path="res://prefab/card_node/small_card_node.tscn" type="PackedScene" id=4]
+[ext_resource path="res://prefab/card_node/character_node.tscn" type="PackedScene" id=5]
+[ext_resource path="res://resource/card/character.gd" type="Script" id=7]
 
 [sub_resource type="Resource" id=2]
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 deck = [  ]
 
 [sub_resource type="Resource" id=3]
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 deck = [  ]
 
 [sub_resource type="Resource" id=4]
-resource_local_to_scene = true
 script = ExtResource( 1 )
+deck = [  ]
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 1 )
+deck = [  ]
+
+[sub_resource type="Resource" id=6]
+resource_local_to_scene = true
+script = ExtResource( 7 )
 card_name = "Alice"
 info = ""
-SmallPrefab = ExtResource( 5 )
-Prefab = ExtResource( 3 )
+SmallPrefab = ExtResource( 4 )
+Prefab = ExtResource( 5 )
+hands = SubResource( 5 )
+equipments = SubResource( 4 )
 
 [resource]
-script = ExtResource( 4 )
+script = ExtResource( 2 )
 pile = SubResource( 3 )
 events = SubResource( 2 )
-player = SubResource( 4 )
+player = SubResource( 6 )
