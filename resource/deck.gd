@@ -12,13 +12,15 @@ export(Array, Resource) var deck
 
 func append(card: Card):
 	deck.append(card)
-	emit_signal("appended", card) 
+	emit_signal("appended", card)
+	emit_changed() 
 
 
 func erase(card: Card):
 	if card in deck:
 		deck.erase(card)
-		emit_signal("erased", card) 
+		emit_signal("erased", card)
+		emit_changed() 
 	else:
 		push_error('no card to erase')
 
@@ -28,6 +30,7 @@ func replace(old_card: Card, new_card: Card):
 		var idx = deck.find(old_card)
 		deck[idx] = new_card
 		emit_signal("replaced", old_card, new_card)
+		emit_changed()
 	else:
 		push_error("no card to replace")
 

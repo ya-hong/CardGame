@@ -6,6 +6,8 @@
 [node name="CardsTable" instance=ExtResource( 2 )]
 margin_right = 300.0
 margin_bottom = 128.0
+rect_min_size = Vector2( 205, 128 )
 
 [node name="CardsNode" parent="." index="0"]
+position = Vector2( 150, 64 )
 script = ExtResource( 1 )

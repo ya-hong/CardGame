@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/event_template/event_package.gd" type="Script" id=1]
+[ext_resource path="res://data/event/event_save.tres" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+card_name = "init"
+info = ""
+scene_mod = 0
+events = [ ExtResource( 2 ), ExtResource( 2 ) ]

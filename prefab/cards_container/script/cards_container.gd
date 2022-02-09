@@ -1,3 +1,4 @@
+tool
 extends ReferenceRect
 class_name CardContinaer 
 
@@ -38,11 +39,20 @@ func setup(deck):
 	
 
 func _ready():
+	connect("resized", self, "on_resized")
+	on_resized()
+	
+	if not deck:
+		return 
 	for card in deck.get_cards():
 		on_deck_appended(card)
 	deck.connect("appended", self, "on_deck_appended")
 	deck.connect("erased", self, "on_deck_erased")
 	deck.connect("replaced", self, "on_deck_replaced")
+
+
+func on_resized():
+	rect_pivot_offset = rect_size / 2
 
 
 func on_deck_appended(card: Card):
