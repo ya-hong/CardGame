@@ -2,6 +2,7 @@ extends Card
 class_name Character
 
 
+export(Resource) var state = State.new() 
 export(Resource) var hands = Deck.new()
 export(Resource) var equipments = Deck.new()
 
