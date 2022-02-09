@@ -7,6 +7,7 @@ signal erased(prefab)
 signal replaced(old_prefab, new_prefab)
 signal focused(prefab)
 signal unfocused(prefab)
+signal clicked(prefab)
 
 
 # 将要使用的prefab类型
@@ -79,9 +80,10 @@ func on_deck_replaced(old_card: Card, new_card: Card):
 func connect_prefab(prefab: CardNode):
 	prefab.connect("mouse_entered", self, "emit_signal", ["focused", prefab])
 	prefab.connect("mouse_exited", self, "emit_signal", ["unfocused", prefab])
+	prefab.connect("clicked", self, "emit_signal", ["clicked", prefab]) 
 
 
 func disconnect_prefab(prefab: CardNode):
 	prefab.disconnect("mouse_entered", self, "emit_signal")
 	prefab.disconnect("mouse_exited", self, "emit_signal")
-
+	prefab.disconnect("clicked", self, "emit_signal")
